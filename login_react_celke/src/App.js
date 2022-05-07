@@ -1,16 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Routes } from "react-router-dom";
-import "./App.css";
+import { BrowserRouter , Switch, Route } from "react-router-dom";
+import Login from "./pages/LoginUsuario";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
+    
+      <BrowserRouter>
         <Switch>
-        
+          <Route  path="/login" component={Login}/>
         </Switch>
-      </Router>
-    </div>
+      </BrowserRouter>
+    
   );
 }
 
