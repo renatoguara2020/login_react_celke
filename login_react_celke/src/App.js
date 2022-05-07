@@ -1,16 +1,16 @@
 import React from "react";
-import { BrowserRouter , Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from './pages/LoginUsuario/index';
 
 
 function App() {
   return (
     
-      <BrowserRouter>
+      <Router>
         <Switch>
           <Route  path="/login" component={Login}/>
         </Switch>
-      </BrowserRouter>
+      </Router>
     
   );
 }
