@@ -30,7 +30,7 @@ import React from 'react';
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div className="col-md-6">
           <label for="validationCustom03" className="form-label">City</label>
           <input type="text" className="form-control" id="validationCustom03" required/>
           <div className="invalid-feedback">
@@ -39,7 +39,7 @@ import React from 'react';
         </div>
         <div className="col-md-3">
           <label for="validationCustom04" className="form-label">State</label>
-            <select name="estados-brasil" className="form-select">
+            <select name="estados-brasil" className="form-select ">
               <option value="selected">Selecione o Estado...</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
