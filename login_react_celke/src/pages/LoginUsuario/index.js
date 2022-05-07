@@ -39,7 +39,8 @@ import React from 'react';
         </div>
         <div className="col-md-3">
           <label for="validationCustom04" className="form-label">State</label>
-            <select name="estados-brasil">
+            <select name="estados-brasil" className="form-select">
+              <option value="selected">Selecione o Estado...</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
               <option value="AP">Amapá</option>
