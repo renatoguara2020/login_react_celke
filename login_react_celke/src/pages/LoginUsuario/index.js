@@ -4,7 +4,7 @@ import React from 'react';
   const Login = () => {
   return (
     <div className="container-sm">
-        <h1>Login</h1>
+        <h1>Registro de Login </h1>
         <form className="row g-3 needs-validation" novalidate>
         <div className="col-md-4">
           <label for="validationCustom01" className="form-label">First name</label>
@@ -75,7 +75,7 @@ import React from 'react';
         </div>
         <div className="col-md-3">
           <label for="validationCustom05" className="form-label">Zip</label>
-          <input type="text" className="form-control" id="validationCustom05" required/>
+          <input type="text" className="form-control"  required/>
           <div className="invalid-feedback">
             Please provide a valid zip.
           </div>
