@@ -3,7 +3,7 @@ import React from 'react';
 
   const Login = () => {
   return (
-    <div>
+    <div className="container-sm">
         <h1>Login</h1>
         <form className="row g-3 needs-validation" novalidate>
         <div className="col-md-4">
