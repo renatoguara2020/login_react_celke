@@ -1,10 +1,15 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Routes } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Bem vindo ao React JS com Celke</h1>
+      <Router>
+        <Switch>
+        
+        </Switch>
+      </Router>
     </div>
   );
 }
