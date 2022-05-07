@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter , Switch, Route } from "react-router-dom";
-import Login from "./pages/LoginUsuario";
+import Login from './pages/LoginUsuario/index';
+
 
 function App() {
   return (

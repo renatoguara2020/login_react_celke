@@ -6,10 +6,10 @@ const sequelize = new Sequelize('my_db_celke', 'postgres', '456ALVES', {
 });
 
 sequelize.authenticate()
-.then(function(){
+.then(()=>{
     console.log("Conexão com o banco de dados realizada com sucesso!");
-}).catch(function(){
-    console.log("Erro: Conexão com o banco de dados não realizada com sucesso!");
+}).catch((error)=>{
+    console.log("Erro: Conexão com o banco de dados não realizada com sucesso!", error);
 });
 
 module.exports = sequelize;
