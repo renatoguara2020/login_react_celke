@@ -91,7 +91,7 @@ import React from 'react';
             </div>
           </div>
         </div>
-        <div class="col-12">
+        <div className="col-12">
           <button className="btn btn-primary" type="submit">Submit form</button>
         </div>
       </form>
