@@ -8,17 +8,20 @@ import React, {useState} from 'react';
       lastName: '',
       username: '',
       password: '',
-      cidade: '',
+      estadosBrasil: '',
       zipCode: '',
-      checkBox: '',
+  
 
     });
 
     const dadosLogin = e => setUsuario({...usuario,[e.target.name]:e.target.value});
 
     const loginSubmit = async e => {
+      e.preventDefault();
 
       console.log(usuario.firstName);
+      console.log(usuario.password);
+      console.log(usuario.estadosBrasil);
     }
 
 
@@ -31,7 +34,7 @@ import React, {useState} from 'react';
         <form className="row g-3 needs-validation" onSubmit={loginSubmit}>
         <div className="col-md-4">
           <label for="validationCustom01" className="form-label">First name</label>
-          <input type="text" className="form-control" name="fistName" onChange={dadosLogin}/>
+          <input type="text" className="form-control" name="firstName" onChange={dadosLogin}/>
           <div className="valid-feedback">
             Looks good!
           </div>
@@ -54,15 +57,15 @@ import React, {useState} from 'react';
           </div>
         </div>
         <div className="col-md-6">
-          <label for="validationCustom03" className="form-label">City</label>
-          <input type="text" className="form-control" name="cidade" onChange={dadosLogin}/>
+          <label for="validationCustom03" className="form-label">Password</label>
+          <input type="text" className="form-control" name="password" onChange={dadosLogin}/>
           <div className="invalid-feedback">
-            Please provide a valid city.
+            Please provide a valid Password.
           </div>
         </div>
         <div className="col-md-3">
           <label for="validationCustom04" className="form-label">State</label>
-            <select name="estados-brasil" className="form-select" onChange={dadosLogin}>
+            <select name="estadosBrasil" className="form-select" onChange={dadosLogin}>
               <option value="selected">Selecione o Estado...</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
@@ -97,7 +100,7 @@ import React, {useState} from 'react';
           </div>
         </div>
         <div className="col-md-3">
-          <label for="validationCustom05" className="form-label" >Zip</label>
+          <label for="validationCustom05" className="form-label" >Zip Code</label>
           <input type="text" className="form-control"  name="zipCode" onChange={dadosLogin}/>
           <div className="invalid-feedback">
             Please provide a valid zip.
