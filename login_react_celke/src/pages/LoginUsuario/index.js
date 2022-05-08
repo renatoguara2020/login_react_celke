@@ -9,11 +9,17 @@ import React, {useState} from 'react';
       username: '',
       password: '',
       cidade: '',
-      zipCode: ''
+      zipCode: '',
+      checkBox: '',
 
     });
 
     const dadosLogin = e => setUsuario({...usuario,[e.target.name]:e.target.value});
+
+    const loginSubmit = async e => {
+
+      console.log(usuario.firstName);
+    }
 
 
     
@@ -22,7 +28,7 @@ import React, {useState} from 'react';
   return (
     <div className="container-sm">
         <h1>Registro de Login </h1>
-        <form className="row g-3 needs-validation" novalidate>
+        <form className="row g-3 needs-validation" onSubmit={loginSubmit}>
         <div className="col-md-4">
           <label for="validationCustom01" className="form-label">First name</label>
           <input type="text" className="form-control" name="fistName" onChange={dadosLogin}/>
@@ -99,7 +105,7 @@ import React, {useState} from 'react';
         </div>
         <div className="col-12">
           <div className="form-check">
-            <input className="form-check-input" type="checkbox" value=""  name="checkBox" onChange={dadosLogin}/>
+            <input className="form-check-input" type="checkbox"   name="checkBox" onChange={dadosLogin}/>
             <label className="form-check-label" for="invalidCheck">
               Agree to terms and conditions
             </label>
