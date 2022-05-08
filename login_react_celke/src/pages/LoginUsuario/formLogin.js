@@ -3,19 +3,18 @@ import React from 'react'
 const formLogin = () => {
   return (
     <div>
-    <form class="row g-3">
-    <div class="col-auto">
-      <label for="staticEmail2" class="visually-hidden">Email</label>
-      <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com"/>
+    <div class="mb-3 row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com"/>
     </div>
-    <div class="col-auto">
-      <label for="inputPassword2" class="visually-hidden">Password</label>
-      <input type="password" class="form-control" id="inputPassword2" placeholder="Password"/>
+  </div>
+  <div class="mb-3 row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword"/>
     </div>
-    <div class="col-auto">
-      <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
-    </div>
-  </form>
+  </div>
     </div>
   )
 }
