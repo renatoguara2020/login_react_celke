@@ -1,7 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 
   const Login = () => {
+    const [usuario, setUsuario] = useState({
+
+      
+    });
+    
+
   return (
     <div className="container-sm">
         <h1>Registro de Login </h1>

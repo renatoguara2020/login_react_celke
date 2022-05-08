@@ -6,13 +6,13 @@ import './App.css';
 
 function App() {
   return (
-    
+    <div className="App">
       <Router>
         <Switch>
           <Route  path="/login" component={Login}/>
         </Switch>
       </Router>
-    
+    </div>
   );
 }
 
