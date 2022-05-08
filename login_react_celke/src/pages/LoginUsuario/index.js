@@ -6,8 +6,8 @@ import {api} from '../../config/configApi';
     const [usuario, setUsuario] = useState({
 
       firstName: '',
-      userName: '',
       lastName: '',
+      userName: '',
       password: '',
       estadosBrasil: '',
       zipCode: '',
@@ -31,10 +31,6 @@ import {api} from '../../config/configApi';
       await api.post('/login', usuario, {headers})
     }
 
-
-    
-    
-
   return (
     <div className="container-sm">
         <h1>Registro de Login </h1>
@@ -57,7 +53,7 @@ import {api} from '../../config/configApi';
           <label for="validationCustomUsername" className="form-label">Username</label>
           <div className="input-group has-validation">
             <span className="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="text" className="form-control" name="username"  onChange={dadosLogin}/>
+            <input type="text" className="form-control" name="userName"  onChange={dadosLogin}/>
             <div className="invalid-feedback">
               Please choose a username.
             </div>
