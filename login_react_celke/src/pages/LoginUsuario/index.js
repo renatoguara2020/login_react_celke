@@ -17,6 +17,7 @@ const Login = () =>{
 
     const loginSubmit = async e => {
         e.preventDefault();
+        console.log(usuario.firstName);
         console.log(usuario.password);
         console.log(usuario.email);
         console.log(usuario.estadosBrasil)
