@@ -4,8 +4,19 @@ import React, {useState} from 'react';
   const Login = () => {
     const [usuario, setUsuario] = useState({
 
-      
-    });
+      firstName: '',
+      lastName: '',
+      username: '',
+      password: '',
+      cidade: '',
+      zipCode: ''
+
+    })
+
+    const dadosLogin = e => setUsuario({...usuario,[e.target.name]:e.target.value});
+
+
+    },
     
 
   return (
@@ -14,14 +25,14 @@ import React, {useState} from 'react';
         <form className="row g-3 needs-validation" novalidate>
         <div className="col-md-4">
           <label for="validationCustom01" className="form-label">First name</label>
-          <input type="text" className="form-control" id="validationCustom01" value="Mark" required/>
+          <input type="text" className="form-control" name="fistName" onChange={dadosLogin}/>
           <div className="valid-feedback">
             Looks good!
           </div>
         </div>
         <div className="col-md-4">
           <label for="validationCustom02" className="form-label">Last name</label>
-          <input type="text" className="form-control" id="validationCustom02" value="Otto" required/>
+          <input type="text" className="form-control" name="lastName" onChange={dadosLogin}/>
           <div className="valid-feedback">
             Looks good!
           </div>
@@ -30,7 +41,7 @@ import React, {useState} from 'react';
           <label for="validationCustomUsername" className="form-label">Username</label>
           <div className="input-group has-validation">
             <span className="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="text" className="form-control" id="validationCustomUsername"  required/>
+            <input type="text" className="form-control" name="username"  onChange={dadosLogin}/>
             <div className="invalid-feedback">
               Please choose a username.
             </div>
@@ -38,14 +49,14 @@ import React, {useState} from 'react';
         </div>
         <div className="col-md-6">
           <label for="validationCustom03" className="form-label">City</label>
-          <input type="text" className="form-control" id="validationCustom03" required/>
+          <input type="text" className="form-control" name="cidade" onChange={dadosLogin}/>
           <div className="invalid-feedback">
             Please provide a valid city.
           </div>
         </div>
         <div className="col-md-3">
           <label for="validationCustom04" className="form-label">State</label>
-            <select name="estados-brasil" className="form-select ">
+            <select name="estados-brasil" className="form-select " onChange={dadosLogin}>
               <option value="selected">Selecione o Estado...</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
@@ -80,15 +91,15 @@ import React, {useState} from 'react';
           </div>
         </div>
         <div className="col-md-3">
-          <label for="validationCustom05" className="form-label">Zip</label>
-          <input type="text" className="form-control"  required/>
+          <label for="validationCustom05" className="form-label" >Zip</label>
+          <input type="text" className="form-control"  name="zipCode" onChange={dadosLogin}/>
           <div className="invalid-feedback">
             Please provide a valid zip.
           </div>
         </div>
         <div className="col-12">
           <div className="form-check">
-            <input className="form-check-input" type="checkbox" value=""  required/>
+            <input className="form-check-input" type="checkbox" value=""  name="checkBox" onChange={dadosLogin}import './formLogin2.css';/>
             <label className="form-check-label" for="invalidCheck">
               Agree to terms and conditions
             </label>
