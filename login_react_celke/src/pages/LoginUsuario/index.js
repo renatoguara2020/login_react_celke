@@ -11,12 +11,12 @@ import React, {useState} from 'react';
       cidade: '',
       zipCode: ''
 
-    })
+    });
 
     const dadosLogin = e => setUsuario({...usuario,[e.target.name]:e.target.value});
 
 
-    },
+    
     
 
   return (
@@ -56,7 +56,7 @@ import React, {useState} from 'react';
         </div>
         <div className="col-md-3">
           <label for="validationCustom04" className="form-label">State</label>
-            <select name="estados-brasil" className="form-select " onChange={dadosLogin}>
+            <select name="estados-brasil" className="form-select" onChange={dadosLogin}>
               <option value="selected">Selecione o Estado...</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
@@ -99,7 +99,7 @@ import React, {useState} from 'react';
         </div>
         <div className="col-12">
           <div className="form-check">
-            <input className="form-check-input" type="checkbox" value=""  name="checkBox" onChange={dadosLogin}import './formLogin2.css';/>
+            <input className="form-check-input" type="checkbox" value=""  name="checkBox" onChange={dadosLogin}/>
             <label className="form-check-label" for="invalidCheck">
               Agree to terms and conditions
             </label>
@@ -113,7 +113,7 @@ import React, {useState} from 'react';
         </div>
       </form>
     </div>
-    );
-  }
+  );
+}
 
 export default Login;
