@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
+import {api} from '../../config/configApi';
 
 
   const Login = () => {
     const [usuario, setUsuario] = useState({
 
       firstName: '',
+      userName: '',
       lastName: '',
-      username: '',
       password: '',
       estadosBrasil: '',
       zipCode: '',
