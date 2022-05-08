@@ -20,9 +20,15 @@ import {api} from '../../config/configApi';
     const loginSubmit = async e => {
       e.preventDefault();
 
-      console.log(usuario.firstName);
-      console.log(usuario.password);
-      console.log(usuario.estadosBrasil);
+      // console.log(usuario.firstName);
+      // console.log(usuario.password);
+      // console.log(usuario.estadosBrasil);
+
+      const headers ={
+         'content-Type': 'application/json',
+      }
+
+      await api.post('/login', usuario, {headers})
     }
 
 
