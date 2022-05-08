@@ -128,7 +128,7 @@ const Login = () =>{
             </div>
           </div>
           <div className="col-12">
-            <button className="btn btn-primary" type="submit">Submit form</button>
+            <button className="btn btn-outline-primary" type="submit">Submit form</button>
           </div>
         </form>
       </div>
