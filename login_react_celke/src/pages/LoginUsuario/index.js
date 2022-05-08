@@ -4,22 +4,28 @@ import api  from '../../config/configApi';
 
 const Login = () =>{
 
-    const [user, setUser] = useState({
+    const [usuario, setUsuario] = useState({
+        firstName:'', 
+        lastName: '', 
+        userName: '', 
+        password: '',
+        zipCode: '',
         email: '',
-        password: ''
     });
 
-    const dadosLogin = e => setUser({...user, [e.target.name]: e.target.value});
+    const dadosLogin = e => setUsuario({...usuario, [e.target.name]: e.target.value});
 
     const loginSubmit = async e => {
         e.preventDefault();
-        console.log(user.password);
+        console.log(usuario.password);
+        console.log(usuario.email);
+        console.log(usuario.estadosBrasil)
 
         const headers = {
             'Content-Type': 'application/json'
         }
 
-        await api.post("/login", user, { headers })
+        await api.post("/login", usuario, { headers })
         .then((response) => {
             console.log(response);
         }).catch((err) => {
